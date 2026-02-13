@@ -73,7 +73,7 @@ public class Main {
 
                     case 3 -> taskQueue.printCompletedTasks();
 
-                    case 4 -> {   //  CANCEL (asks ID)
+                    case 4 -> {
                         System.out.print("Enter task ID to cancel: ");
                         long id = scanner.nextLong();
 
@@ -85,7 +85,7 @@ public class Main {
                         }
                     }
 
-                    case 5 -> taskQueue.printCancelledTasks();  // VIEW cancelled list
+                    case 5 -> taskQueue.printCancelledTasks();
                 case 6 -> taskQueue.printCancelledTasks();
                     case 7 -> {
                         System.out.println("Shutting down scheduler...");

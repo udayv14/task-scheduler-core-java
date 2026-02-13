@@ -16,7 +16,7 @@ public abstract class Task {
         this.taskId = taskId;
         this.executeAt = executeAt;
         this.priority = priority;
-        this.status = TaskStatus.PENDING; // default
+        this.status = TaskStatus.PENDING;
     }
 
     public long getTaskId() {
