@@ -14,7 +14,6 @@ public class WorkerThread implements Runnable {
         this.taskQueue = taskQueue;
     }
 
-    // graceful shutdown support
     public void stopWorker() {
         running = false;
     }
@@ -31,10 +30,10 @@ public class WorkerThread implements Runnable {
                     continue;
                 }
 
-                // check execution time
+            
                 if (!task.getExecuteAt().isAfter(LocalDateTime.now())) {
 
-                    taskQueue.pollTask(); // remove from pending
+                    taskQueue.pollTask(); 
                     task.setStatus(TaskStatus.RUNNING);
 
                     try {
