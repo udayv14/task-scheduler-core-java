@@ -17,17 +17,14 @@ public class TaskQueue {
         this.taskQueue = new PriorityQueue<>(new TaskComparator());
     }
 
-    // add new task
     public synchronized void addTask(Task task) {
         taskQueue.offer(task);
     }
 
-    // remove next task
+
     public synchronized Task pollTask() {
         return taskQueue.poll();
     }
-
-    // peek next task
     public synchronized Task peekTask() {
         return taskQueue.peek();
     }
@@ -36,12 +33,11 @@ public class TaskQueue {
         return taskQueue.isEmpty();
     }
 
-    // add completed / cancelled / failed task to history
     public synchronized void addCompletedTask(Task task) {
         completedTasks.add(task);
     }
 
-    // list pending tasks
+
     public synchronized void printPendingTasks() {
         if (taskQueue.isEmpty()) {
             System.out.println("No pending tasks.");
@@ -59,8 +55,6 @@ public class TaskQueue {
             );
         }
     }
-
-    // cancel task by ID
     public synchronized boolean cancelTaskById(long taskId) {
 
         Iterator<Task> iterator = taskQueue.iterator();
