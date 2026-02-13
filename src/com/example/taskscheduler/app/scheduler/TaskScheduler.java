@@ -17,7 +17,7 @@ public class TaskScheduler {
 
     public void scheduleTask(Task task) {
 
-        // validation: past time allowed nahi
+
         if (task.getExecuteAt().isBefore(LocalDateTime.now())) {
             throw new IllegalArgumentException(
                     "Task execution time cannot be in the past"
