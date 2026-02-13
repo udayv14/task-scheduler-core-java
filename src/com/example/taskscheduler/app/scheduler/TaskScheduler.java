@@ -14,9 +14,7 @@ public class TaskScheduler {
         this.taskQueue = taskQueue;
     }
 
-    /**
-     * Task add karne ka entry point
-     */
+
     public void scheduleTask(Task task) {
 
         // validation: past time allowed nahi

@@ -47,7 +47,7 @@ public class WorkerThread implements Runnable {
                         );
                     }
 
-                    // ✅ VERY IMPORTANT
+
                     taskQueue.addCompletedTask(task);
 
                 } else {
